@@ -1,8 +1,7 @@
 @import "./style.css";
-
 @import "./article.css";
-
 @import "./components.css";
+
 .content__image-category {
 	width: 70%;
 }
