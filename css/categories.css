@@ -1,0 +1,35 @@
+@import "./style.css";
+
+@import "./article.css";
+
+@import "./components.css";
+.content__image-category {
+	width: 70%;
+}
+.content__image-cover-category {
+	padding-bottom: 90%;
+}
+.content__categories {
+	align-self: center;
+}
+.filter__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filter__item {
+	margin-right: 16px;
+}
+
+.filter__item.filter__item__active {
+	background-color: #29C6CF;
+	border-radius: 18px;
+	padding: 2px 16px;
+}
+
+
+@media(max-width: 600px) {
+	.filter__list {
+		justify-content: center;
+	}
+}

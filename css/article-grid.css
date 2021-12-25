@@ -1,0 +1,54 @@
+@import "./style.css";
+
+
+.article-grid {
+	margin-top: 34px;
+	display: grid;
+	gap: 8px;
+	grid-template-columns: minmax(100px, 340px) 1fr;
+	grid-template-areas: ". article"
+						 ". pagination";
+}
+
+.article-grid__cover {
+	grid-area: article;
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -16px;
+}
+
+.article-grid__wrapper {
+	flex: 1 1 calc(50% - 32px);
+	margin-right: 16px;
+	min-width: 240px;
+	margin-bottom: 24px;
+}
+
+.pagination__grid {
+	grid-area: pagination;
+}
+
+@media(max-width: 742px) {
+	.article-grid  {
+		grid-template-columns: minmax(100px, 232px) 1fr;
+	}
+}
+
+@media(max-width: 600px) {
+	.article-grid {
+		grid-template-columns: 1fr;
+		grid-template-areas: "article"
+		"pagination";
+	}
+	.article-grid__cover {
+		margin-right: 0px;
+	}
+	
+	.article-grid__wrapper {
+		margin: 16px;
+	}
+
+	.pagination__grid {
+		padding: 10px;
+	}
+}

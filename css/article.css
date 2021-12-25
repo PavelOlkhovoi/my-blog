@@ -1,0 +1,60 @@
+@import "./style.css";
+@import "./components.css";
+
+.content__title-article {
+	width: 72%;
+	margin-bottom: 16px;
+}
+
+.article__body {
+	margin-bottom: 120px;
+	display: grid;
+	grid-template-columns: minmax(100px, 340px) 1fr;
+	grid-template-areas: ". post"
+						 ". text";
+}
+
+.article__image-post {
+	grid-area: post;
+	margin-top: 80px;
+	margin-bottom: 16px;
+}
+
+.article__image-post .article__cover {
+	padding-bottom: 46%;
+}
+
+.article__content {
+	grid-area: text;
+}
+
+@media(max-width: 1060px) {
+	.article__body {
+		display: grid;
+		grid-template-columns: minmax(100px, 340px) 1fr;
+		grid-template-areas: "post post"
+							 "text text";
+	}
+	.article__content {
+		padding: 5% 10%;
+	}
+
+	.content__title-article {
+		width: 80%;
+	}
+}
+@media(max-width: 735px) {
+	.content__title-article {
+		width: 100%;
+		margin-bottom: 4px;
+	}
+}
+
+@media(max-width: 600px) {
+	.article__body {
+		margin-bottom: 60px;
+	}
+	.article__content{
+		padding: 5% 5%;
+	}
+}
